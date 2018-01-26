@@ -1,0 +1,31 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+	<h:form>
+		<p:menubar>
+			<p:submenu label="Temperature">
+				<p:menuitem value="Basic monthly filter"
+					url="/temp/filtro_mensal.jsf" />
+				<p:menuitem value="Basic date filter" url="/temp/filtro_data.jsf" />
+				<p:menuitem value="Hourly averages" url="/temp/filtro_horario.jsf" />
+				<p:menuitem value="Custom filter"
+					url="/temp/filtro_personalizado.jsf" />
+			</p:submenu>
+			<p:menuitem value="|" disabled="true" />
+			<p:submenu label="Luminosity">
+				<p:menuitem value="Basic monthly filter"
+					url="/light/filtro_mensal.jsf" />
+				<p:menuitem value="Basic date filter" url="/light/filtro_data.jsf" />
+				<p:menuitem value="Hourly averages" url="/light/filtro_horario.jsf" />
+				<p:menuitem value="Custom filter"
+					url="/light/filtro_personalizado.jsf" />
+			</p:submenu>
+			<p:menuitem value="|" disabled="true" />
+			<p:menuitem value="Users" url="/user/cns_user.jsf" />
+			<p:menuitem value="|" disabled="true" />
+			<p:menuitem value="Exit" action="#{sessionBean.logout}" />
+		</p:menubar>
+	</h:form>
+</ui:composition>

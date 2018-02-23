@@ -225,6 +225,8 @@ public class GraficoT {
 				Axis yaxis = model.getAxis(AxisType.Y);
 				yaxis.setMin(min);
 				yaxis.setMax(max);
+				
+				model.getAxis(AxisType.X).setTickAngle(-90);
 
 				model.addSeries(series);
 
